@@ -1,0 +1,1 @@
+pnpm build:eslint && git add ./eslint.config.mjs ./src/generated-rules.ts && pnpm lint-staged && pnpm test
