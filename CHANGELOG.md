@@ -1,5 +1,13 @@
 # @kylsgl/eslint-config
 
+## 1.0.2
+
+### Patch Changes
+
+- [`bc3b09c`](https://github.com/kylsgl/eslint-config/commit/bc3b09c6cdcaf00cd457cdf180d161ebb6d127f9): remove "react-hooks/react-compiler" rule and replace with rules from "recommended-latest" - by [@kylsgl](https://github.com/kylsgl)
+
+- [`6202c6b`](https://github.com/kylsgl/eslint-config/commit/6202c6bfac370c7dd79dd344368cd191e121d69e): rename @stylistic/func-call-spacing to @stylistic/function-call-spacing - by [@kylsgl](https://github.com/kylsgl)
+
 ## 1.0.1
 
 ### Patch Changes
