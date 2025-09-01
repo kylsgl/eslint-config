@@ -216,8 +216,8 @@ const rules$4 = {
         "@stylistic/computed-property-spacing": ["error", "never"],
         "@stylistic/dot-location": ["error", "property"],
         "@stylistic/eol-last": ["error", "always"],
-        "@stylistic/func-call-spacing": ["error", "never"],
         "@stylistic/function-call-argument-newline": ["error", "consistent"],
+        "@stylistic/function-call-spacing": ["error", "never"],
         "@stylistic/function-paren-newline": ["error", "multiline-arguments"],
         "@stylistic/generator-star-spacing": [
           "error",

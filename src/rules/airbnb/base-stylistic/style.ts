@@ -77,12 +77,12 @@ const rules: RuleConfig = {
 		// https://eslint.style/rules/default/eol-last
 		'@stylistic/eol-last': ['error', 'always'],
 
-		// enforce spacing between functions and their invocations
-		// https://eslint.style/rules/default/function-call-spacing
-		'@stylistic/func-call-spacing': ['error', 'never'],
-
 		// https://eslint.style/rules/default/function-call-argument-newline
 		'@stylistic/function-call-argument-newline': ['error', 'consistent'],
+
+		// enforce spacing between functions and their invocations
+		// https://eslint.style/rules/default/function-call-spacing
+		'@stylistic/function-call-spacing': ['error', 'never'],
 
 		// require line breaks inside function parentheses if there are line breaks between parameters
 		// https://eslint.style/rules/default/function-paren-newline
