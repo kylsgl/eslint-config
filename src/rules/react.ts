@@ -1,8 +1,11 @@
+import { type Linter } from 'eslint';
+import reactHooks from 'eslint-plugin-react-hooks';
 import testingLibrary from 'eslint-plugin-testing-library';
 import globals from 'globals';
 
 import { FilesGlob } from '../constants';
 import { type RuleConfig } from '../types';
+import { extractConfigRules } from '../utils';
 import { airbnbReactConfig } from './airbnb';
 
 const baseConfig: RuleConfig = {
@@ -12,6 +15,12 @@ const baseConfig: RuleConfig = {
 	},
 	name: 'react/base',
 	rules: {
+		...extractConfigRules(
+			// @ts-expect-error - no types
+			(reactHooks.configs as Record<string, Linter.Config[]>)[
+				'recommended-latest'
+			],
+		),
 		'no-param-reassign': [
 			'error',
 			{
@@ -35,7 +44,7 @@ const baseConfig: RuleConfig = {
 				props: true,
 			},
 		],
-		'react-hooks/react-compiler': 'error',
+		'react-hooks/exhaustive-deps': 'error',
 		'react/checked-requires-onchange-or-readonly': 'error',
 		// 'react/jsx-props-no-spreading': [
 		// 	'error',

@@ -8,7 +8,7 @@ import n from 'eslint-plugin-n';
 import perfectionist from 'eslint-plugin-perfectionist';
 import promise from 'eslint-plugin-promise';
 import 'eslint-plugin-react';
-import 'eslint-plugin-react-hooks';
+import reactHooks from 'eslint-plugin-react-hooks';
 import 'eslint-plugin-react-refresh';
 import * as regexp from 'eslint-plugin-regexp';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
@@ -3804,24 +3804,6 @@ const rules = {
     ...eslintConfigPrettier.rules}
 });
 
-({
-  languageOptions: {
-    globals: globals.browser
-  }});
-({
-  rules: {
-    ...testingLibrary.configs["flat/react"].rules}
-});
-
-({
-  languageOptions: {
-    globals: globals.vitest
-  },
-  rules: {
-    ...vitest.configs.recommended.rules
-  }
-});
-
 function extractConfigRules(configs) {
   return configs.reduce(
     (accumulator, currentValue) => {
@@ -3836,6 +3818,30 @@ function extractConfigRules(configs) {
     {}
   );
 }
+
+({
+  languageOptions: {
+    globals: globals.browser
+  },
+  rules: {
+    ...extractConfigRules(
+      // @ts-expect-error - no types
+      reactHooks.configs["recommended-latest"]
+    )}
+});
+({
+  rules: {
+    ...testingLibrary.configs["flat/react"].rules}
+});
+
+({
+  languageOptions: {
+    globals: globals.vitest
+  },
+  rules: {
+    ...vitest.configs.recommended.rules
+  }
+});
 
 ({
   rules: {
