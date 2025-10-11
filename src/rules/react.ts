@@ -15,12 +15,12 @@ const baseConfig: RuleConfig = {
 	},
 	name: 'react/base',
 	rules: {
-		...extractConfigRules(
+		...extractConfigRules([
 			// @ts-expect-error - no types
-			(reactHooks.configs as Record<string, Linter.Config[]>)[
+			(reactHooks.configs as Record<string, Linter.Config>)[
 				'recommended-latest'
 			],
-		),
+		]),
 		'no-param-reassign': [
 			'error',
 			{

@@ -246,6 +246,7 @@ const unicornConfig: RuleConfig = {
 		'unicorn/no-array-for-each': 'off',
 		'unicorn/no-array-reduce': 'off',
 		'unicorn/no-array-reverse': 'off', // Already covered by 'sonarjs/no-misleading-array-reverse', which also supports 'sort' method
+		'unicorn/no-array-sort': 'off',
 		'unicorn/no-for-loop': 'off',
 		'unicorn/no-null': 'off',
 		'unicorn/numeric-separators-style': [

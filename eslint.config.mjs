@@ -1610,6 +1610,7 @@ const rules$4 = {
         "unicorn/no-array-method-this-argument": "error",
         "unicorn/no-array-reduce": "off",
         "unicorn/no-array-reverse": "off",
+        "unicorn/no-array-sort": "off",
         "unicorn/no-await-expression-member": "error",
         "unicorn/no-await-in-promise-methods": "error",
         "unicorn/no-console-spaces": "error",
@@ -1665,8 +1666,10 @@ const rules$4 = {
         "unicorn/prefer-array-index-of": "error",
         "unicorn/prefer-array-some": "error",
         "unicorn/prefer-at": "error",
+        "unicorn/prefer-bigint-literals": "error",
         "unicorn/prefer-blob-reading-methods": "error",
         "unicorn/prefer-class-fields": "error",
+        "unicorn/prefer-classlist-toggle": "error",
         "unicorn/prefer-code-point": "error",
         "unicorn/prefer-date-now": "error",
         "unicorn/prefer-default-parameters": "error",
@@ -1714,6 +1717,7 @@ const rules$4 = {
         "unicorn/prevent-abbreviations": ["off", { checkFilenames: false }],
         "unicorn/relative-url-style": "error",
         "unicorn/require-array-join-separator": "error",
+        "unicorn/require-module-attributes": "error",
         "unicorn/require-module-specifiers": "error",
         "unicorn/require-number-to-fixed-digits-argument": "error",
         "unicorn/require-post-message-target-origin": "off",
@@ -2469,6 +2473,7 @@ const rules$4 = {
         "vitest/no-commented-out-tests": "error",
         "vitest/no-identical-title": "error",
         "vitest/no-import-node-test": "error",
+        "vitest/prefer-called-exactly-once-with": "error",
         "vitest/require-local-test-context-for-concurrent-snapshots": "error",
         "vitest/valid-describe-callback": "error",
         "vitest/valid-expect": "error",
@@ -3824,10 +3829,10 @@ function extractConfigRules(configs) {
     globals: globals.browser
   },
   rules: {
-    ...extractConfigRules(
+    ...extractConfigRules([
       // @ts-expect-error - no types
       reactHooks.configs["recommended-latest"]
-    )}
+    ])}
 });
 ({
   rules: {
