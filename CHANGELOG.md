@@ -1,5 +1,11 @@
 # @kylsgl/eslint-config
 
+## 1.0.4
+
+### Patch Changes
+
+- [`46a64dd`](https://github.com/kylsgl/eslint-config/commit/46a64dd7a08a2eca12e63a0b503efd9aa3ff1a64): add "id-token" write permission for npm provenance - by [@kylsgl](https://github.com/kylsgl)
+
 ## 1.0.3
 
 ### Patch Changes
