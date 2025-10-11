@@ -1,5 +1,15 @@
 # @kylsgl/eslint-config
 
+## 1.0.3
+
+### Patch Changes
+
+- [`5f92a1b`](https://github.com/kylsgl/eslint-config/commit/5f92a1b0b917c8a0f15c4ec9a24689cf99ad6a49): update dependencies to their latest versions - by [@kylsgl](https://github.com/kylsgl)
+
+- [`a5976c4`](https://github.com/kylsgl/eslint-config/commit/a5976c40c360c8819049cf07dcc3ea0938674309): enable npm provenance - by [@kylsgl](https://github.com/kylsgl)
+
+- [`3aa6733`](https://github.com/kylsgl/eslint-config/commit/3aa67334cb59ee1e3a964b2cd966d5a9bff8d2c6): update dev dependencies to their latest versions - by [@kylsgl](https://github.com/kylsgl)
+
 ## 1.0.2
 
 ### Patch Changes
