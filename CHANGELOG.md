@@ -1,5 +1,13 @@
 # @kylsgl/eslint-config
 
+## 1.0.5
+
+### Patch Changes
+
+- [`2cfe577`](https://github.com/kylsgl/eslint-config/commit/2cfe5774c0971366019f1aef66fc718e05edc0a7): update dev dependencies to their latest versions - by [@kylsgl](https://github.com/kylsgl)
+
+- [`49c0765`](https://github.com/kylsgl/eslint-config/commit/49c0765cbec90136bdd189c133e389e25b135380): update dependencies to their latest versions - by [@kylsgl](https://github.com/kylsgl)
+
 ## 1.0.4
 
 ### Patch Changes
