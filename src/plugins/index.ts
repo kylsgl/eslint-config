@@ -35,7 +35,7 @@ export const plugins: Plugins = {
 	perfectionist,
 	promise: promise as ESLint.Plugin,
 	react,
-	'react-hooks': reactHooks,
+	'react-hooks': reactHooks as ESLint.Plugin,
 	'react-refresh': reactRefresh,
 	regexp,
 	'simple-import-sort': simpleImportSort,
