@@ -253,6 +253,7 @@ const unicornConfig: RuleConfig = {
 			'error',
 			{ number: { groupLength: 3, minimumDigits: 0 } },
 		],
+		'unicorn/prefer-dom-node-dataset': 'off',
 		'unicorn/prefer-dom-node-text-content': 'off',
 		'unicorn/prefer-query-selector': 'off',
 		'unicorn/prevent-abbreviations': [

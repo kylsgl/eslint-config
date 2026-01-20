@@ -1680,7 +1680,7 @@ const rules$4 = {
         "unicorn/prefer-date-now": "error",
         "unicorn/prefer-default-parameters": "error",
         "unicorn/prefer-dom-node-append": "error",
-        "unicorn/prefer-dom-node-dataset": "error",
+        "unicorn/prefer-dom-node-dataset": "off",
         "unicorn/prefer-dom-node-remove": "error",
         "unicorn/prefer-dom-node-text-content": "off",
         "unicorn/prefer-event-target": "error",
