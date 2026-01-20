@@ -4363,7 +4363,7 @@ const rules: Rules = {
 					'error',
 					{ namedComponents: ['function-declaration'], unnamedComponents: [] },
 				],
-				'react/hook-use-state': 'error',
+				'react/hook-use-state': ['error', { allowDestructuredState: 'true' }],
 				'react/iframe-missing-sandbox': 'error',
 				'react/jsx-boolean-value': ['error', 'never', { always: [] }],
 				'react/jsx-child-element-spacing': 'off',
