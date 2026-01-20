@@ -62,7 +62,7 @@ const baseConfig: RuleConfig = {
 				unnamedComponents: [],
 			},
 		],
-		'react/hook-use-state': ['error', { allowDestructuredState: 'true' }],
+		'react/hook-use-state': ['error', { allowDestructuredState: true }],
 		'react/jsx-curly-brace-presence': [
 			'error',
 			{ children: 'always', propElementValues: 'always', props: 'never' },
