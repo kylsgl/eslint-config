@@ -1767,9 +1767,12 @@ const rules$4 = {
         "{coverage,node_modules,patches}/**"
       ],
       rules: {
+        "package-json/bin-name-casing": "error",
+        "package-json/exports-subpaths-style": "error",
         "package-json/no-empty-fields": "error",
         "package-json/no-redundant-files": "error",
         "package-json/no-redundant-publishConfig": "error",
+        "package-json/order-properties": "error",
         "package-json/repository-shorthand": "error",
         "package-json/require-author": "error",
         "package-json/require-description": "error",
@@ -1777,6 +1780,7 @@ const rules$4 = {
         "package-json/require-name": "error",
         "package-json/require-type": "error",
         "package-json/require-version": "error",
+        "package-json/scripts-name-casing": "error",
         "package-json/sort-collections": "error",
         "package-json/specify-peers-locally": "error",
         "package-json/unique-dependencies": "error",
@@ -3809,7 +3813,8 @@ const rules = {
   }});
 ({
   rules: {
-    ...packageJSON.configs.recommended.rules}
+    ...packageJSON.configs.recommended.rules,
+    ...packageJSON.configs.stylistic.rules}
 });
 ({
   rules: {

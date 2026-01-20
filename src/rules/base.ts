@@ -96,6 +96,7 @@ const packageJSONConfig: RuleConfig = {
 	name: 'packageJSON/base',
 	rules: {
 		...packageJSON.configs.recommended.rules,
+		...packageJSON.configs.stylistic.rules,
 		'package-json/no-redundant-files': 'error',
 		'package-json/require-author': 'error',
 	},
