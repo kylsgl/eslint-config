@@ -1,5 +1,17 @@
 # @kylsgl/eslint-config
 
+## 1.0.6
+
+### Patch Changes
+
+- [`f98662b`](https://github.com/kylsgl/eslint-config/commit/f98662b0184558c220a24c19038baaec2d610040): update dependencies to their latest versions - by [@kylsgl](https://github.com/kylsgl)
+
+- [`5ca81f8`](https://github.com/kylsgl/eslint-config/commit/5ca81f8089991b8f93c63a08a34c092ab4fd0407): update dev dependencies to their latest versions - by [@kylsgl](https://github.com/kylsgl)
+
+- [`f9d18b2`](https://github.com/kylsgl/eslint-config/commit/f9d18b2f5a1557f44e9d30e3c0b672233775e7d2): Allow useState() values to be destructured - by [@kylsgl](https://github.com/kylsgl)
+
+- [`a060b54`](https://github.com/kylsgl/eslint-config/commit/a060b5449542f31c85c7efa597fc24e13834b922): Accessing the node dataset property is significantly slower than getAttribute(…), .setAttribute(…), .removeAttribute(…) and .hasAttribute(…). - by [@kylsgl](https://github.com/kylsgl)
+
 ## 1.0.5
 
 ### Patch Changes
