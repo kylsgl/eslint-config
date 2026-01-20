@@ -1,5 +1,13 @@
 # @kylsgl/eslint-config
 
+## 1.0.7
+
+### Patch Changes
+
+- [`4c45a74`](https://github.com/kylsgl/eslint-config/commit/4c45a7453bad921df69fef5108a3187d5298c896): Add stylistic config from eslint-plugin-package-json - by [@kylsgl](https://github.com/kylsgl)
+
+- [`d064be3`](https://github.com/kylsgl/eslint-config/commit/d064be3351bcfd2ccd28e083edecd3edf40ca43f): Change "react/hook-use-state" allowDestructuredState value to boolean - by [@kylsgl](https://github.com/kylsgl)
+
 ## 1.0.6
 
 ### Patch Changes
