@@ -9,7 +9,7 @@ import perfectionist from 'eslint-plugin-perfectionist';
 import promise from 'eslint-plugin-promise';
 import 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import 'eslint-plugin-react-refresh';
+import { reactRefresh } from 'eslint-plugin-react-refresh';
 import * as regexp from 'eslint-plugin-regexp';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sonarjs from 'eslint-plugin-sonarjs';
@@ -1365,6 +1365,7 @@ const rules$4 = {
         "sonarjs/disabled-timeout": "off",
         "sonarjs/dns-prefetching": "off",
         "sonarjs/duplicates-in-character-class": "error",
+        "sonarjs/dynamically-constructed-templates": "error",
         "sonarjs/elseif-without-else": "off",
         "sonarjs/empty-string-repetition": "error",
         "sonarjs/encryption": "off",
@@ -1385,6 +1386,7 @@ const rules$4 = {
         "sonarjs/function-return-type": "error",
         "sonarjs/future-reserved-words": "error",
         "sonarjs/generator-without-yield": "error",
+        "sonarjs/hardcoded-secret-signatures": "error",
         "sonarjs/hashing": "error",
         "sonarjs/hidden-files": "error",
         "sonarjs/in-operator-type-error": "error",
@@ -1542,6 +1544,7 @@ const rules$4 = {
         "sonarjs/redundant-type-aliases": "error",
         "sonarjs/regex-complexity": "error",
         "sonarjs/regular-expr": "off",
+        "sonarjs/review-blockchain-mnemonic": "error",
         "sonarjs/session-regeneration": "error",
         "sonarjs/shorthand-property-grouping": "off",
         "sonarjs/single-char-in-character-classes": "error",
@@ -1613,6 +1616,7 @@ const rules$4 = {
           }
         ],
         "unicorn/import-style": "error",
+        "unicorn/isolated-functions": "error",
         "unicorn/new-for-builtins": "error",
         "unicorn/no-abusive-eslint-disable": "error",
         "unicorn/no-accessor-recursion": "error",
@@ -3580,6 +3584,7 @@ const plugins = {
   "package-json": packageJSON,
   perfectionist,
   promise,
+  "react-refresh": reactRefresh.plugin,
   regexp,
   "simple-import-sort": simpleImportSort,
   sonarjs,
@@ -3836,7 +3841,7 @@ const rules = {
   }});
 ({
   rules: {
-    ...sonarjs.configs.recommended.rules}
+    ...(sonarjs.configs?.["recommended"]).rules}
 });
 ({
   rules: {

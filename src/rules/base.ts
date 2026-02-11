@@ -174,7 +174,7 @@ const sonarJsConfig: RuleConfig = {
 	files: FilesGlob.JS,
 	name: 'sonarjs/base',
 	rules: {
-		...sonarjs.configs.recommended.rules,
+		...(sonarjs.configs?.['recommended'] as RuleConfig).rules,
 		// Rules that are already covered or causes conflitcs in the Airbnb config
 		'sonarjs/array-callback-without-return': 'off',
 		'sonarjs/assertions-in-tests': 'off',

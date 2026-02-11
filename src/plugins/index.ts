@@ -11,7 +11,7 @@ import perfectionist from 'eslint-plugin-perfectionist';
 import promise from 'eslint-plugin-promise';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
+import { reactRefresh } from 'eslint-plugin-react-refresh';
 import * as regexp from 'eslint-plugin-regexp';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sonarjs from 'eslint-plugin-sonarjs';
@@ -36,7 +36,7 @@ export const plugins: Plugins = {
 	promise: promise as ESLint.Plugin,
 	react,
 	'react-hooks': reactHooks as ESLint.Plugin,
-	'react-refresh': reactRefresh,
+	'react-refresh': reactRefresh.plugin,
 	regexp,
 	'simple-import-sort': simpleImportSort,
 	sonarjs,
