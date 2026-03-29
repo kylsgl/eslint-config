@@ -45,8 +45,8 @@
 		"./CHANGELOG.md"
 	],
 	"scripts": {
-		"build": "pnpm generate:rules && rollup --config ./rollup.config.mjs",
-		"build:eslint": "pnpm generate:rules && rollup --config ./scripts/eslint-config/rollup.config.mjs",
+		"build": "pnpm generate:rules && rolldown --config ./rolldown.config.ts",
+		"build:eslint": "pnpm generate:rules && rolldown --config ./scripts/eslint-config/rolldown.config.ts",
 		"format": "prettier --write .",
 		"generate:rules": "tsx ./scripts/generate-rules.ts",
 		"lint": "eslint ./",
@@ -90,10 +90,8 @@
 		"husky": "^9.1.7",
 		"lint-staged": "^16.2.7",
 		"prettier": "^3.8.1",
-		"rollup": "^4.57.1",
-		"rollup-plugin-dts": "^6.3.0",
-		"rollup-plugin-esbuild": "^6.2.1",
-		"terser": "^5.46.0",
+		"rolldown": "1.0.0-rc.12",
+		"rolldown-plugin-dts": "^0.23.2",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3",
 		"vitest": "^4.0.18"
