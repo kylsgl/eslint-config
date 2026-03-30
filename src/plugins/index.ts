@@ -9,9 +9,12 @@ import packageJSON from 'eslint-plugin-package-json';
 import perfectionist from 'eslint-plugin-perfectionist';
 // @ts-expect-error - no types
 import promise from 'eslint-plugin-promise';
-import react from 'eslint-plugin-react';
+import reactDom from 'eslint-plugin-react-dom';
 import reactHooks from 'eslint-plugin-react-hooks';
+import reactNamingConvention from 'eslint-plugin-react-naming-convention';
 import { reactRefresh } from 'eslint-plugin-react-refresh';
+import reactWebApi from 'eslint-plugin-react-web-api';
+import reactX from 'eslint-plugin-react-x';
 import * as regexp from 'eslint-plugin-regexp';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sonarjs from 'eslint-plugin-sonarjs';
@@ -34,9 +37,12 @@ export const plugins: Plugins = {
 	'package-json': packageJSON as ESLint.Plugin,
 	perfectionist,
 	promise: promise as ESLint.Plugin,
-	react,
+	'react-dom': reactDom,
 	'react-hooks': reactHooks as ESLint.Plugin,
+	'react-naming-convention': reactNamingConvention,
 	'react-refresh': reactRefresh.plugin,
+	'react-web-api': reactWebApi,
+	'react-x': reactX,
 	regexp,
 	'simple-import-sort': simpleImportSort,
 	sonarjs,
@@ -81,9 +87,12 @@ export const internalPlugins: InternalPlugins = {
 			files: FilesGlob.JSX,
 			plugins: {
 				'jsx-a11y': plugins['jsx-a11y'],
-				react: plugins.react,
+				'react-dom': plugins['react-dom'],
 				'react-hooks': plugins['react-hooks'],
+				'react-naming-convention': plugins['react-naming-convention'],
 				'react-refresh': plugins['react-refresh'],
+				'react-web-api': plugins['react-web-api'],
+				'react-x': plugins['react-x'],
 			},
 		},
 		{

@@ -5,9 +5,10 @@ const rules: RuleConfig = {
 	files: FilesGlob.JSX,
 	name: 'airbnb/react-typescript',
 	rules: {
-		'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
-		'react/prop-types': 'off',
-		'react/require-default-props': 'off',
+		'react-dom/no-string-style-prop': 'off',
+		'react-dom/no-unknown-property': 'off',
+		'react-x/no-leaked-conditional-rendering': 'error',
+		'react-x/no-unused-props': 'error',
 	},
 };
 

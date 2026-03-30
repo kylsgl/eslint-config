@@ -21,6 +21,10 @@ const baseConfig: RuleConfig = {
 				'recommended-latest'
 			],
 		]),
+		'@stylistic/jsx-curly-brace-presence': [
+			'error',
+			{ children: 'always', propElementValues: 'always', props: 'never' },
+		],
 		'no-param-reassign': [
 			'error',
 			{
@@ -44,36 +48,19 @@ const baseConfig: RuleConfig = {
 				props: true,
 			},
 		],
+		'react-dom/no-flush-sync': 'error',
 		'react-hooks/exhaustive-deps': 'error',
-		'react/checked-requires-onchange-or-readonly': 'error',
-		// 'react/jsx-props-no-spreading': [
-		// 	'error',
-		// 	{
-		// 		custom: 'enforce',
-		// 		exceptions: [],
-		// 		explicitSpread: 'enforce',
-		// 		html: 'ignore',
-		// 	},
-		// ],
-		'react/function-component-definition': [
-			'error',
-			{
-				namedComponents: ['function-declaration'],
-				unnamedComponents: [],
-			},
-		],
-		'react/hook-use-state': ['error', { allowDestructuredState: true }],
-		'react/jsx-curly-brace-presence': [
-			'error',
-			{ children: 'always', propElementValues: 'always', props: 'never' },
-		],
-		'react/jsx-key': 'error',
-		'react/jsx-max-depth': ['error', { max: 5 }],
-		'react/jsx-no-leaked-render': ['error', { validStrategies: ['ternary'] }],
-		'react/jsx-no-literals': 'error',
-		'react/jsx-props-no-spreading': 'off',
-		'react/prefer-read-only-props': 'error',
-		'react/react-in-jsx-scope': 'off',
+		'react-naming-convention/context-name': 'error',
+		'react-naming-convention/id-name': 'error',
+		'react-naming-convention/ref-name': 'error',
+		'react-web-api/no-leaked-event-listener': 'error',
+		'react-web-api/no-leaked-interval': 'error',
+		'react-web-api/no-leaked-resize-observer': 'error',
+		'react-web-api/no-leaked-timeout': 'error',
+		'react-x/no-class-component': 'error',
+		'react-x/no-clone-element': 'error',
+		'react-x/no-unnecessary-use-prefix': 'error',
+		'react-x/no-use-context': 'error',
 	},
 };
 

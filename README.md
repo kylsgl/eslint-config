@@ -116,9 +116,12 @@ This config uses the following plugins:
 ### React
 
 - `eslint-plugin-jsx-a11y`
-- `eslint-plugin-react`
+- `eslint-plugin-react-dom`
 - `eslint-plugin-react-hooks`
+- `eslint-plugin-react-naming-convention`
 - `eslint-plugin-react-refresh`
+- `eslint-plugin-react-web-api`
+- `eslint-plugin-react-x`
 - `eslint-plugin-testing-library`
 
 ## License

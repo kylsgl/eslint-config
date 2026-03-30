@@ -21,9 +21,12 @@ export interface Plugins {
 	readonly 'package-json': ESLint.Plugin;
 	readonly perfectionist: ESLint.Plugin;
 	readonly promise: ESLint.Plugin;
-	readonly react: ESLint.Plugin;
+	readonly 'react-dom': ESLint.Plugin;
 	readonly 'react-hooks': ESLint.Plugin;
+	readonly 'react-naming-convention': ESLint.Plugin;
 	readonly 'react-refresh': ESLint.Plugin;
+	readonly 'react-web-api': ESLint.Plugin;
+	readonly 'react-x': ESLint.Plugin;
 	readonly regexp: ESLint.Plugin;
 	readonly 'simple-import-sort': ESLint.Plugin;
 	readonly sonarjs: ESLint.Plugin;
