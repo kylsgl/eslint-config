@@ -5074,57 +5074,59 @@ function hasRegExpMatch(node, regExp, enabled) {
 function isSafeDivision(node, nonZeroInitializerNames, ignorePascalCase, ignoreScreamingSnakeCase) {
 	return node.right.type === "Literal" && typeof node.right.value == "number" && node.right.value !== 0 || node.right.type === "Literal" && typeof node.right.value == "bigint" && node.right.value !== 0n || hasRegExpMatch(node.right, PASCAL_CASE_REGEXP, ignorePascalCase) || hasRegExpMatch(node.right, SCREAMING_SNAKE_CASE_REGEXP, ignoreScreamingSnakeCase) || hasNonZeroInitializer(node.right, nonZeroInitializerNames) || hasGuardEarly(node, node.right) || hasGuard(node, node.right) || node.right.type === "BinaryExpression" && isSafeDivision(node.right, nonZeroInitializerNames, ignorePascalCase, ignoreScreamingSnakeCase);
 }
-var noUnsafeDivision = {
-	create(context) {
-		let opts = context.options.at(0), ignorePascalCase = opts?.ignorePascalCase ?? !0, ignoreScreamingSnakeCase = opts?.ignoreScreamingSnakeCase ?? !0, nonZeroConstantVariableNames = /* @__PURE__ */ new Set();
-		return {
-			AssignmentExpression: (node) => {
-				node.operator !== "/=" && node.operator !== "%=" || isSafeDivision(node, nonZeroConstantVariableNames, ignorePascalCase, ignoreScreamingSnakeCase) || context.report({
-					messageId: "noUnsafeDivision",
-					node: node.right
-				});
-			},
-			BinaryExpression: (node) => {
-				node.operator !== "/" && node.operator !== "%" || isSafeDivision(node, nonZeroConstantVariableNames, ignorePascalCase, ignoreScreamingSnakeCase) || context.report({
-					messageId: "noUnsafeDivision",
-					node: node.right
-				});
-			},
-			VariableDeclaration: (node) => {
-				node.kind === "const" && node.declarations.forEach((variable) => {
-					variable.id.type === "Identifier" && variable.init?.type === "Literal" && (typeof variable.init.value == "number" && variable.init.value !== 0 || typeof variable.init.value == "bigint" && variable.init.value !== 0n) && nonZeroConstantVariableNames.add(variable.id.name);
-				});
-			}
-		};
-	},
-	meta: {
-		messages: { noUnsafeDivision: "Potential division by zero. Ensure that the divisor is non-zero." },
-		schema: [{
-			additionalProperties: !1,
-			properties: {
-				ignorePascalCase: {
-					default: !0,
-					type: "boolean"
-				},
-				ignoreScreamingSnakeCase: {
-					default: !0,
-					type: "boolean"
-				}
-			},
-			type: "object"
-		}],
-		type: "problem"
-	}
-}, kylsgl = { rules: {
-	"no-default-params": noDefaultParams,
-	"no-top-level-function-expression": noTopLevelFunctionExpression,
-	"no-unsafe-division": noUnsafeDivision
-} }, plugins = {
+//#endregion
+//#region src/plugins/index.ts
+var plugins = {
 	"@stylistic": stylistic,
 	"@typescript-eslint": tsEslint.plugin,
 	"import-x": importX,
 	"jsx-a11y": jsxA11y,
-	kylsgl,
+	kylsgl: { rules: {
+		"no-default-params": noDefaultParams,
+		"no-top-level-function-expression": noTopLevelFunctionExpression,
+		"no-unsafe-division": {
+			create(context) {
+				let opts = context.options.at(0), ignorePascalCase = opts?.ignorePascalCase ?? !0, ignoreScreamingSnakeCase = opts?.ignoreScreamingSnakeCase ?? !0, nonZeroConstantVariableNames = /* @__PURE__ */ new Set();
+				return {
+					AssignmentExpression: (node) => {
+						node.operator !== "/=" && node.operator !== "%=" || isSafeDivision(node, nonZeroConstantVariableNames, ignorePascalCase, ignoreScreamingSnakeCase) || context.report({
+							messageId: "noUnsafeDivision",
+							node: node.right
+						});
+					},
+					BinaryExpression: (node) => {
+						node.operator !== "/" && node.operator !== "%" || isSafeDivision(node, nonZeroConstantVariableNames, ignorePascalCase, ignoreScreamingSnakeCase) || context.report({
+							messageId: "noUnsafeDivision",
+							node: node.right
+						});
+					},
+					VariableDeclaration: (node) => {
+						node.kind === "const" && node.declarations.forEach((variable) => {
+							variable.id.type === "Identifier" && variable.init?.type === "Literal" && (typeof variable.init.value == "number" && variable.init.value !== 0 || typeof variable.init.value == "bigint" && variable.init.value !== 0n) && nonZeroConstantVariableNames.add(variable.id.name);
+						});
+					}
+				};
+			},
+			meta: {
+				messages: { noUnsafeDivision: "Potential division by zero. Ensure that the divisor is non-zero." },
+				schema: [{
+					additionalProperties: !1,
+					properties: {
+						ignorePascalCase: {
+							default: !0,
+							type: "boolean"
+						},
+						ignoreScreamingSnakeCase: {
+							default: !0,
+							type: "boolean"
+						}
+					},
+					type: "object"
+				}],
+				type: "problem"
+			}
+		}
+	} },
 	n,
 	"package-json": packageJSON,
 	perfectionist,
