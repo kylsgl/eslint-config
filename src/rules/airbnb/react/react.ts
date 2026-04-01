@@ -135,7 +135,6 @@ const rules: RuleConfig = {
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
 		//
 		// 'react/jsx-boolean-value': ['error', 'never', { always: [] }],
-		'react-x/jsx-shorthand-boolean': 'error',
 
 		// Ensures inline tags are not rendered without spaces between them
 		//
@@ -213,7 +212,6 @@ const rules: RuleConfig = {
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/bc976b837abeab1dffd90ac6168b746a83fc83cc/docs/rules/jsx-fragments.md
 		//
 		// 'react/jsx-fragments': ['error', 'syntax'],
-		'react-x/jsx-shorthand-fragment': 'error',
 
 		// Enforce event handler naming conventions in JSX
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
@@ -243,7 +241,7 @@ const rules: RuleConfig = {
 		// Turned off because it has too many false positives
 		//
 		// 'react/jsx-key': 'off',
-		'react-x/jsx-key-before-spread': 'error',
+		'react-jsx/no-key-after-spread': 'error',
 		'react-x/no-missing-key': 'error',
 
 		// Validate JSX maximum depth
@@ -287,7 +285,7 @@ const rules: RuleConfig = {
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
 		//
 		// 'react/jsx-no-comment-textnodes': 'error',
-		'react-x/jsx-no-comment-textnodes': 'error',
+		'react-jsx/no-comment-textnodes': 'error',
 
 		// Prevent react contexts from taking non-stable values
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/e2eaadae316f9506d163812a09424eb42698470a/docs/rules/jsx-no-constructed-context-values.md
@@ -340,7 +338,7 @@ const rules: RuleConfig = {
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
 		//
 		// 'react/jsx-no-useless-fragment': 'error',
-		'react-x/no-useless-fragment': 'error',
+		'react-jsx/no-useless-fragment': 'error',
 
 		// One JSX Element Per Line
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-one-expression-per-line.md
@@ -512,7 +510,7 @@ const rules: RuleConfig = {
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
 		//
 		// 'react/no-children-prop': 'error',
-		'react-x/no-children-prop': 'error',
+		'react-jsx/no-children-prop': 'error',
 
 		// Prevent usage of dangerous JSX properties
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-danger.md
@@ -578,7 +576,7 @@ const rules: RuleConfig = {
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/8785c169c25b09b33c95655bf508cf46263bc53f/docs/rules/no-namespace.md
 		//
 		// 'react/no-namespace': 'error',
-		'react-dom/no-namespace': 'error',
+		'react-jsx/no-namespace': 'error',
 
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/66b58dd4864678eb869a7bf434c72ff7ac530eb1/docs/rules/no-object-type-as-default-prop.md
 		//

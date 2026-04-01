@@ -118,6 +118,7 @@ This config uses the following plugins:
 - `eslint-plugin-jsx-a11y`
 - `eslint-plugin-react-dom`
 - `eslint-plugin-react-hooks`
+- `eslint-plugin-react-jsx`
 - `eslint-plugin-react-naming-convention`
 - `eslint-plugin-react-refresh`
 - `eslint-plugin-react-web-api`

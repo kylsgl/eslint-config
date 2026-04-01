@@ -23,6 +23,7 @@ export interface Plugins {
 	readonly promise: ESLint.Plugin;
 	readonly 'react-dom': ESLint.Plugin;
 	readonly 'react-hooks': ESLint.Plugin;
+	readonly 'react-jsx': ESLint.Plugin;
 	readonly 'react-naming-convention': ESLint.Plugin;
 	readonly 'react-refresh': ESLint.Plugin;
 	readonly 'react-web-api': ESLint.Plugin;

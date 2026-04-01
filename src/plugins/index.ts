@@ -11,6 +11,7 @@ import perfectionist from 'eslint-plugin-perfectionist';
 import promise from 'eslint-plugin-promise';
 import reactDom from 'eslint-plugin-react-dom';
 import reactHooks from 'eslint-plugin-react-hooks';
+import reactJSX from 'eslint-plugin-react-jsx';
 import reactNamingConvention from 'eslint-plugin-react-naming-convention';
 import { reactRefresh } from 'eslint-plugin-react-refresh';
 import reactWebApi from 'eslint-plugin-react-web-api';
@@ -39,6 +40,7 @@ export const plugins: Plugins = {
 	promise: promise as ESLint.Plugin,
 	'react-dom': reactDom,
 	'react-hooks': reactHooks as ESLint.Plugin,
+	'react-jsx': reactJSX,
 	'react-naming-convention': reactNamingConvention,
 	'react-refresh': reactRefresh.plugin,
 	'react-web-api': reactWebApi,
@@ -89,6 +91,7 @@ export const internalPlugins: InternalPlugins = {
 				'jsx-a11y': plugins['jsx-a11y'],
 				'react-dom': plugins['react-dom'],
 				'react-hooks': plugins['react-hooks'],
+				'react-jsx': plugins['react-jsx'],
 				'react-naming-convention': plugins['react-naming-convention'],
 				'react-refresh': plugins['react-refresh'],
 				'react-web-api': plugins['react-web-api'],

@@ -150,6 +150,8 @@ const baseTypeCheckedConfig: RuleConfig = {
 		),
 		...typeScriptRulesObj,
 		...typeScriptTypeCheckedRulesObj,
+		// TODO: Remove once false positives are fixed https://github.com/typescript-eslint/typescript-eslint/issues/12158
+		'@typescript-eslint/no-unnecessary-type-arguments': 'off',
 	},
 };
 
