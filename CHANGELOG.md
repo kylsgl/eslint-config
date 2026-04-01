@@ -1,5 +1,23 @@
 # @kylsgl/eslint-config
 
+## 2.0.0
+
+### Major Changes
+
+- [`3b23889`](https://github.com/kylsgl/eslint-config/commit/3b238897ae5294c3946b3756b19bec72f73d7be4): Migrate from `eslint-plugin-react` to `eslint-plugin-react-dom`, `eslint-plugin-react-naming-convention`, `eslint-plugin-react-web-api`, and `eslint-plugin-react-x`, dropping support for class components. - by [@kylsgl](https://github.com/kylsgl)
+
+### Patch Changes
+
+- [`94f542d`](https://github.com/kylsgl/eslint-config/commit/94f542d735110ad9e1845b2e67d5b7ec6f2871e8): remove pnpm engine requirement from package.json to avoid potential install issues - by [@kylsgl](https://github.com/kylsgl)
+
+- [`95067fe`](https://github.com/kylsgl/eslint-config/commit/95067fe2d47ac4c7b8fef2df4a5e0c4a0bd134ed): fix build scripts types - by [@kylsgl](https://github.com/kylsgl)
+
+- [`77c959b`](https://github.com/kylsgl/eslint-config/commit/77c959bc35af38ac60a6b1c7fc0dd2c7c666eb77): update dev dependencies to their latest versions - by [@kylsgl](https://github.com/kylsgl)
+
+- [`c58484d`](https://github.com/kylsgl/eslint-config/commit/c58484d0950e639865d4ba7190803b10ff58ffde): Migrate bundler from rollup to rolldown - by [@kylsgl](https://github.com/kylsgl)
+
+- [`2a7398a`](https://github.com/kylsgl/eslint-config/commit/2a7398a31b770df5f2fa8c7deea06004634f28fd): update dependencies to their latest versions - by [@kylsgl](https://github.com/kylsgl)
+
 ## 1.0.8
 
 ### Patch Changes
