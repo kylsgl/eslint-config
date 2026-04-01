@@ -28,5 +28,5 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true
 	},
-	"include": ["./src", "rolldown.config.ts", "vitest.config.ts"]
+	"include": ["./scripts", "./src", "rolldown.config.ts", "vitest.config.ts"]
 }

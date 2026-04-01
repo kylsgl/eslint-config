@@ -33,7 +33,7 @@ function mergeRules(
 				.sort((a: string, b: string): number => a.localeCompare(b))
 				.join('');
 
-			if (configKey !== undefined && configKey.length > 0) {
+			if (configKey !== undefined && configKey !== '') {
 				const configValue: Linter.Config = {
 					files,
 					ignores,
@@ -44,6 +44,11 @@ function mergeRules(
 
 				if (configKey in accumulator) {
 					const existingConfigValue: Linter.Config = accumulator[configKey];
+
+					const existingGlobals: unknown =
+						existingConfigValue.languageOptions?.['globals'];
+
+					const currentGlobals: unknown = languageOptions?.['globals'];
 
 					configValue.ignores = [
 						...new Set<string>([
@@ -56,8 +61,8 @@ function mergeRules(
 						...existingConfigValue.languageOptions,
 						...languageOptions,
 						globals: {
-							...existingConfigValue.languageOptions?.globals,
-							...languageOptions?.globals,
+							...(typeof existingGlobals === 'object' ? existingGlobals : {}),
+							...(typeof currentGlobals === 'object' ? currentGlobals : {}),
 						},
 					};
 
